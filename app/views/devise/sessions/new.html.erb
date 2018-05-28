@@ -1,0 +1,48 @@
+<div class="login-page">
+  <div class="login-wrap center-margin">
+    <div class="login-html">
+      <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Entrar</label>
+      <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Ajuda</label>
+      <div class="login-form">
+        <div class="sign-in-htm">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="group">
+          <%= f.label :email, class: "label" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "input" %>
+        </div>
+        <div class="group">
+          <%= f.label :password, class: "label" %><br />
+          <%= f.password_field :password, autocomplete: "off",class: "input" %>
+        </div>
+        <div class="group">
+          <%= f.check_box :remember_me, id:"check", class: "check" %>
+          <label for="check" style="color: #fff"><span class="icon"></span> Mantenha-me conectado</label>
+        </div>
+        <div class="group">
+            <%= f.submit "Entrar", class: "button"%>
+        </div>
+        <% end%>
+
+          <div class="hr"></div>
+
+        </div>
+        <div class="sign-up-htm center-margin">
+          <h3>Esqueceu a senha? Preencha o formulário abaixo:</h3>
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="group">
+              <%= f.label :email, class: "label" %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "input" %>
+            </div>
+
+            <div class="group">
+              <%= f.submit "Enviar instruções", class: "button" %>
+            </div>
+          <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

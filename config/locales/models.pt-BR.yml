@@ -1,0 +1,50 @@
+pt-BR:
+  attributes:
+    created_at: Criado em
+    updated_at: Modificado em"
+    name: Nome
+    address: Endereço
+    phone: Telefone
+    locality: Bairro
+    document: Documento
+    person: Pessoa Física
+    collaborator_category: Categoria Profissional
+  activerecord:
+    models:
+      admin_user:
+        one: Usuário
+        other: Usuários
+      unit:
+        one: Unidade de atendimento
+        other: Unidades de atendimento
+      address:
+        one: Endereço
+        other: Endereços
+      locality:
+        one: Bairro
+        other: Bairros
+      person:
+        one: Pessoa Física
+        other: Pessoas Físicas
+      collaborator:
+        one: Profissional
+        other: Profissionais
+      collaborator_category:
+        one: Categoria Profissional
+        other: Categorias Profissionais
+    attributes:
+      admin_user:
+        current_sign_in_at: Entrou na sessão atual em
+        last_sign_in_at: Entrou a última vez em
+        current_sign_in_ip: Ip atual
+        last_sign_in_ip: Ip da última vez que entrou
+        encrypted_password: Senha criptografada
+        remember_created_at: Marcou o "Lembrar de mim" em
+        sign_in_count: Quantidade de vezes que se entrou
+      person:
+        street: Rua
+        other: Complemento
+        number: Número
+        cep: Cep
+
+      # will translate User attribute "login" as "Handle"

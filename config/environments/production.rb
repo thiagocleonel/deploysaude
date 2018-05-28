@@ -9,11 +9,11 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-
+  
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
   # For large-scale production use, consider using a caching reverse proxy like
@@ -26,7 +26,7 @@ Rails.application.configure do
   # change this to true to load images from the public folder in production for non-NGNIX setup, like PUMA
   config.serve_static_files = true
 
-      # Compress JavaScripts and CSS.
+  # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 

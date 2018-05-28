@@ -5,20 +5,16 @@
     <div class="left_col scroll-view">
 
       <div class="navbar nav_title" style="border: 0;">
-        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
+        <%= image_tag 'logo-header.png', class:"logo-side-bar " %>
       </div>
       <div class="clearfix"></div>
 
 
       <!-- menu profile quick info -->
-      <div class="profile">
-        <div class="profile_pic">
-          <%= image_tag "img.jpg", :class => "img-circle profile_img"  %>
-        </div>
-        <div class="profile_info">
-          <span>Welcome,</span>
-          <h2>John Doe</h2>
-        </div>
+      <div class="block" style="text-align:center">
+
+          <h2>Bem vindo, <%= @presentation_name %></h2>
+
       </div>
       <!-- /menu profile quick info -->
 
@@ -27,7 +23,7 @@
       <!-- sidebar menu -->
       <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
-        <div class="menu_section">
+        <div class="menu_section" style="margin-top: 10px;">
           <h3>General</h3>
           <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
