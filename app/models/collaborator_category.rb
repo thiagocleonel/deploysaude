@@ -1,3 +1,3 @@
-class CollaboratorCategory < ApplicationRecord
+class CollaboratorCategory < ActiveRecord::Base
   has_many :collaborator
 end

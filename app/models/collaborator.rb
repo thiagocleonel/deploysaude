@@ -1,4 +1,4 @@
-class Collaborator < ApplicationRecord
+class Collaborator < ActiveRecord::Base
   attr_accessor :person_attributes
 
   belongs_to :person, :dependent => :destroy

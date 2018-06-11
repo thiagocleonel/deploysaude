@@ -19,10 +19,10 @@
 
 <%= render "partials/sidenav" if !@devise_layout %>
 <%= render "partials/topnav" if !@devise_layout %>
+<%= render "partials/panel" if !@devise_layout %>
+<%= yield if @devise_layout %>
 
-<%= yield %>
 
-  <%= render "partials/footer" if !@devise_layout %>
   <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>
 
 </body>

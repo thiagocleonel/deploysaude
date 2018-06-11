@@ -204,16 +204,57 @@ a{color:inherit;text-decoration:none}
 	text-align:center;
 }
 
+ .nav_menu, .top_nav{
+	background-color: #A90023;
+	background: #A90023;
+	color: #fff;
+}
+
+.panel_toolbox li a{
+	background-color: #fff !important;
+	background: #fff !important;
+}
+
+.panel_toolbox li {
+	background-color: #fff !important;
+		background: #fff !important;
+}
+
+.active a {
+
+	background-color: #A90023 !important;
+	background: #A90023 !important;
+	color: #fff !important;
+	border-color: #A90023 !important;
+}
+
+div.navbar-default > div.container {	background-color: #A90023 !important;}
+
+.sidebar-footer a{
+	background-color: #A90023 !important;
+	background: #A90023 !important;
+}
 
 .nav_title{
   text-align: center;
   background: #A90023;
+	color: #fff;
+}
+
+.navbar-right li a span{
+	color:#fff !important;
+}
+
+.alert{
+		color:#fff !important;
 }
 
 a, .left_col *{
 	background: #A90023;
 	color: #fff
 }
+
+.right_col{border-radius: 10px;}
 
 .glyphicon{
 	background: #A90023;
@@ -226,4 +267,21 @@ a, .left_col *{
 
 .side-menu .active{
 	background: #A90023;
+}
+
+li a i,span{
+	color: #fff;
+	fill: #fff;
+}
+.top_nav div nav ul li.open ul li a{
+	color: #fff;
+}
+
+#topnav-username{
+	color:#fff;
+}
+
+.menu_section ul li ul li{
+	color: #fff !important;
+	fill: #fff !important;
 }
