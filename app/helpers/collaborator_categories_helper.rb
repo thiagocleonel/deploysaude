@@ -1,0 +1,2 @@
+module CollaboratorCategoriesHelper
+end

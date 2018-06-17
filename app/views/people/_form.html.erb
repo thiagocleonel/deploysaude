@@ -1,0 +1,64 @@
+<%= form_for(@person) do |f| %>
+  <% if @person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% @person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+   
+  <div class="form-group ">
+          
+          Nome:<br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input", placeholer: "nome" %>
+  </div>
+    <div class="form-group ">
+          
+          Documento:<br />
+          <%= f.text_field :document, autofocus: true, autocomplete: "document",class: "input", placeholer: "documento" %>
+  </div>
+    <div class="form-group ">
+          
+          Endereço:<br />
+          <%= f.text_field :street, autofocus: true, autocomplete: "street",class: "input", placeholer: "street" %>
+  </div>
+    <div class="form-group ">
+          
+          Número:<br />
+          <%= f.text_field :number, autofocus: true, autocomplete: "number",class: "input", placeholer: "number" %>
+  </div>
+    <div class="form-group ">
+          
+          Outros:<br />
+          <%= f.text_field :other, autofocus: true, autocomplete: "other",class: "input", placeholer: "other" %>
+  </div>
+
+  <div class="form-group ">
+          
+          CEP:<br />
+          <%= f.text_field :cep, autofocus: true, autocomplete: "cep",class: "input", placeholer: "cep" %>
+  </div>
+
+  <div class="form-group ">
+          
+          e-mail:<br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "input", placeholer: "email" %>
+  </div>
+
+
+  <div class="form-group ">
+          
+          Telefone:<br />
+          <%= f.text_field :phone, autofocus: true, autocomplete: "phone",class: "input", placeholer: "phone" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

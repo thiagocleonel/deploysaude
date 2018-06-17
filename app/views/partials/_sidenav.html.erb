@@ -28,11 +28,21 @@
           <ul class="nav side-menu">
             <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu" style="display: none">
-                <li><a href="index.html">Dashboard</a>
+               <li>
+                <%= link_to "Colaboradores", collaborators_path %> </li> 
+               <li>
+               <li>
+                <%= link_to "Tipo de Colaborador", collaborator_categories_path %> </li> 
+               <li>
+                
+                
+                <%= link_to "Localidades", localities_path %> 
+               </li>
+                <li>
+                  <%= link_to "Pessoas", people_path %> 
                 </li>
-                <li><a href="index2.html">Dashboard2</a>
-                </li>
-                <li><a href="index3.html">Dashboard3</a>
+                <li>
+                  <%= link_to "Unidades", units_path %> 
                 </li>
               </ul>
             </li>

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Collaborator Categories</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @collaborator_categories.each do |collaborator_category| %>
+      <tr>
+        <td><%= collaborator_category.name %></td>
+        <td><%= link_to 'Show', collaborator_category %></td>
+        <td><%= link_to 'Edit', edit_collaborator_category_path(collaborator_category) %></td>
+        <td><%= link_to 'Destroy', collaborator_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Collaborator category', new_collaborator_category_path %>

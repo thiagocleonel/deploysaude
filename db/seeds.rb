@@ -9,3 +9,12 @@
 CollaboratorCategory.create(name: "Medico")
 CollaboratorCategory.create(name: "Agente de saúde")
 CollaboratorCategory.create(name: "Atendente")
+####################################################################################
+puts 'Cadastrando Usuario padrao'
+User.create!(name:"Admin", 
+email: "admin@mail.com",
+password: "123456",
+password_confirmation: "123456",
+role: 0	)
+
+puts 'Cadastro Realizado'
