@@ -29,6 +29,9 @@
 @import "css/ion.rangeSlider";
 @import "css/ion.rangeSlider.skinFlat";
 @import "pace";
+@import "select2";
+@import "select2-bootstrap";
+@import "formtastic";
 
 .login-page body{
 	margin:0;
@@ -37,6 +40,18 @@
 	font:600 16px/18px 'Open Sans',sans-serif;
 
 
+}
+
+ul .dropdown-menu li a:hover{
+	background-color: #9E000C !important;
+}
+
+ul .dropdown-menu li {
+	background-color: #A90023 !important;
+}
+
+#menu1{
+	background-color: #A90023;
 }
 body{
 	background-color: #A90023
@@ -84,7 +99,7 @@ a{color:inherit;text-decoration:none}
 	transition:all .4s linear;
 }
 .login-html .sign-in,
-.login-html .sign-up,
+.login-html .select2sign-up,
 .login-form .group .check{
 	display:none;
 }
@@ -254,7 +269,28 @@ a, .left_col *{
 	color: #fff
 }
 
-.right_col{border-radius: 10px;}
+.right_col{
+color: #000;
+a{
+	background-color: transparent !important;
+	color: #A90023 !important;
+}
+
+}
+
+
+
+.right_col{border-radius: 10px;
+}
+
+.x_panel{
+	background-image: image-url("brasaotrans.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin: 0 auto;
+
+}
 
 .glyphicon{
 	background: #A90023;
@@ -284,4 +320,22 @@ li a i,span{
 .menu_section ul li ul li{
 	color: #fff !important;
 	fill: #fff !important;
+}
+
+table.table-bordered * :not(a) {
+   border: 2px solid black !important;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #cccccc;
+	 color: #000;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
+   background-color: #eee;
+	 color: #000;
+}
+
+.select2-results__option{
+	color: #000;
 }

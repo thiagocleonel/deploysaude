@@ -24,11 +24,13 @@ class CollaboratorsController < ApplicationController
   # POST /collaborators
   # POST /collaborators.json
   def create
-    @collaborator = Collaborator.new(collaborator_params)
 
+    @collaborator = Collaborator.new
+    @collaborator.collaborator_category = CollaboratorCategory.find(collaborator_params[:collaborator_category_id])
+    @collaborator.person = Person.find(collaborator_params[:person_id])
     respond_to do |format|
       if @collaborator.save
-        format.html { redirect_to @collaborator, notice: 'Collaborator was successfully created.' }
+        format.html { redirect_to @collaborator, notice: 'Profissional registrado com sucesso.' }
         format.json { render :show, status: :created, location: @collaborator }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class CollaboratorsController < ApplicationController
   def update
     respond_to do |format|
       if @collaborator.update(collaborator_params)
-        format.html { redirect_to @collaborator, notice: 'Collaborator was successfully updated.' }
+        format.html { redirect_to @collaborator, notice: 'Profissional atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @collaborator }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class CollaboratorsController < ApplicationController
   def destroy
     @collaborator.destroy
     respond_to do |format|
-      format.html { redirect_to collaborators_url, notice: 'Collaborator was successfully destroyed.' }
+      format.html { redirect_to collaborators_url, notice: 'Profissional removido com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +71,6 @@ class CollaboratorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def collaborator_params
-      params.fetch(:collaborator, {})
+      params.require(:collaborator).permit(:id,:collaborator_category_id, :person_id, :person, :collaborator_category)
     end
 end

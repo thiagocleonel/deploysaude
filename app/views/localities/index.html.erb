@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Localities</h1>
+<h1>Bairros</h1>
 
-<table class="table">
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Nome</th>
@@ -14,9 +14,9 @@
     <% @localities.each do |locality| %>
       <tr>
         <td><%= locality.name %></td>
-        <td><%= link_to 'Show', locality %></td>
-        <td><%= link_to 'Edit', edit_locality_path(locality) %></td>
-        <td><%= link_to 'Destroy', locality, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', locality %></td>
+        <td><%= link_to 'Editar', edit_locality_path(locality) %></td>
+        <td><%= link_to 'Excluir', locality, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Locality', new_locality_path %>
+<%= link_to 'Cadastrar bairro', new_locality_path, class: "btn btn-danger" %>

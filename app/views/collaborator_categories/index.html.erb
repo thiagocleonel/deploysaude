@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Collaborator Categories</h1>
+<h1>Categorias Profissionais</h1>
 
-<table class="table">
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Nome</th>
@@ -14,9 +14,9 @@
     <% @collaborator_categories.each do |collaborator_category| %>
       <tr>
         <td><%= collaborator_category.name %></td>
-        <td><%= link_to 'Show', collaborator_category %></td>
-        <td><%= link_to 'Edit', edit_collaborator_category_path(collaborator_category) %></td>
-        <td><%= link_to 'Destroy', collaborator_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', collaborator_category %></td>
+        <td><%= link_to 'Editar', edit_collaborator_category_path(collaborator_category) %></td>
+        <td><%= link_to 'Excluir', collaborator_category, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Collaborator category', new_collaborator_category_path %>
+<%= link_to 'Cadastrar categoria profissonal', new_collaborator_category_path, class: "btn btn-danger"%>

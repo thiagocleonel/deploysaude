@@ -28,7 +28,7 @@ class LocalitiesController < ApplicationController
 
     respond_to do |format|
       if @locality.save
-        format.html { redirect_to @locality, notice: 'Locality was successfully created.' }
+        format.html { redirect_to @locality, notice: 'Bairro registrado com sucesso.' }
         format.json { render :show, status: :created, location: @locality }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class LocalitiesController < ApplicationController
   def update
     respond_to do |format|
       if @locality.update(locality_params)
-        format.html { redirect_to @locality, notice: 'Locality was successfully updated.' }
+        format.html { redirect_to @locality, notice: 'Bairro atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @locality }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class LocalitiesController < ApplicationController
   def destroy
     @locality.destroy
     respond_to do |format|
-      format.html { redirect_to localities_url, notice: 'Locality was successfully destroyed.' }
+      format.html { redirect_to localities_url, notice: 'Bairro removido com sucesso.' }
       format.json { head :no_content }
     end
   end

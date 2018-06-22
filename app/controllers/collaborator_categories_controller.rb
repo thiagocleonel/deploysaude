@@ -28,7 +28,7 @@ class CollaboratorCategoriesController < ApplicationController
 
     respond_to do |format|
       if @collaborator_category.save
-        format.html { redirect_to @collaborator_category, notice: 'Collaborator category was successfully created.' }
+        format.html { redirect_to @collaborator_category, notice: 'Categoria profissional registrada com sucesso.' }
         format.json { render :show, status: :created, location: @collaborator_category }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class CollaboratorCategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @collaborator_category.update(collaborator_category_params)
-        format.html { redirect_to @collaborator_category, notice: 'Collaborator category was successfully updated.' }
+        format.html { redirect_to @collaborator_category, notice: 'Categoria profissional atualizada com sucesso.' }
         format.json { render :show, status: :ok, location: @collaborator_category }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class CollaboratorCategoriesController < ApplicationController
   def destroy
     @collaborator_category.destroy
     respond_to do |format|
-      format.html { redirect_to collaborator_categories_url, notice: 'Collaborator category was successfully destroyed.' }
+      format.html { redirect_to collaborator_categories_url, notice: 'Categoria profissional removida com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -69,7 +69,7 @@ class CollaboratorCategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def collaborator_category_params
-      
+
       params.require(:collaborator_category).permit(:name)
     end
 end

@@ -40,6 +40,5 @@
 //= require  js/nprogress.js
 
 //= require flash.js
-
-
-
+//= require select2-full
+//= require select2_locale_pt-BR

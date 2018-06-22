@@ -11,28 +11,30 @@
       </ul>
     </div>
   <% end %>
-  
+
   <div class="form-group ">
-          
-          Nome:<br />
-          <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input", placeholer: "nome" %>
+
+    <label for:"unit_name">Nome</label>
+
+      <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input form-control form-control-lg", placeholder: "Nome", :required => true %>
   </div>
     <div class="form-group ">
-          Endereço:<br />
-          
-          <%= f.text_area :address, autofocus: true, autocomplete: "address",class: "input" %>
+
+      <label for:"unit_address">Endereço</label>
+          <%= f.text_area :address, autofocus: true, autocomplete: "address",class: "input form-control form-control-lg", placeholder: "Endereço", :required => true %>
   </div>
 
-    
 
-    
+
+
   <div class="form-group">
-          Telefone: <br />
-          <%= f.text_field :phone, autofocus: true, autocomplete: "phone",class: "input" %>
+    <label for:"unit_phone">Telefone</label>
+
+          <%= f.text_field :phone, autofocus: true, autocomplete: "phone",class: "input form-control form-control-md", placeholder: "Endereço", :required => true %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Registrar unidade de saúde", class: "btn btn-success btn-md" %>
   </div>
-  
+
 <% end %>

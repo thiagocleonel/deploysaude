@@ -1,7 +1,22 @@
-<%= form_for(@collaborator) do |f| %>
+
+<%= semantic_form_for @collaborator do |f| %>
+<%= f.inputs do %>
+<div class="form-group ">
+  <%= f.input :person,:prompt => "Selecione uma Pessoa física", :input_html => { :class => 'form-control form-control-lg required', placeholder: "Selecione"}%>
+  <%= f.input :collaborator_category,:prompt => "Selecione uma categoria profissional", :input_html => { :class => 'form-control form-control-lg required', placeholder: "Selecione"}%>
+</div>
+<%end %>
+<%= f.actions do %>
+<%= f.action :submit, :as => :button, :label => "Registrar profissional", :button_html => { :class => 'btn btn-success btn-lg'} %>
+<%= f.action  :cancel, :label => "Cancelar" %>
+<%end%>
+
+<%end%>
+
+
   <% if @collaborator.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@collaborator.errors.count, "error") %> prohibited this collaborator from being saved:</h2>
+      <h2><%= pluralize(@collaborator.errors.count, "error") %> impediram o registro desse colaborador:</h2>
 
       <ul>
       <% @collaborator.errors.full_messages.each do |message| %>
@@ -11,20 +26,24 @@
     </div>
   <% end %>
 
+
+
  <div class="form-group ">
-          
-          Nome:<br />
-          <%= f.collection_select :person_id, Person.all, :id, :name, prompt: true , autofocus: true, autocomplete: "name",class: "input", placeholer: "nome" %>
+
+          <!-- <label for="collaborator_person_id"> Pessoa física:</label>
+
   </div>
-  
+
 
   <div class="form-group ">
-          
-          Profissional:<br />
-          <%= f.collection_select :collaborator_category_id, CollaboratorCategory.all, :id, :name, prompt: true , autofocus: true, autocomplete: "name",class: "input", placeholer: "nome" %>
+
+          <!-- <label for="collaborator_collaborator_category_id"> Categoria profissional:</label>
+
+
+
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+
+    <%= link_to 'Voltar', collaborators_path, class: "btn btn-danger"%>
   </div>
-<% end %>

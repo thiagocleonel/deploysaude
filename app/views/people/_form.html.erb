@@ -11,54 +11,64 @@
     </div>
   <% end %>
 
-  
-   
-  <div class="form-group ">
-          
-          Nome:<br />
-          <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input", placeholer: "nome" %>
-  </div>
-    <div class="form-group ">
-          
-          Documento:<br />
-          <%= f.text_field :document, autofocus: true, autocomplete: "document",class: "input", placeholer: "documento" %>
-  </div>
-    <div class="form-group ">
-          
-          Endereço:<br />
-          <%= f.text_field :street, autofocus: true, autocomplete: "street",class: "input", placeholer: "street" %>
-  </div>
-    <div class="form-group ">
-          
-          Número:<br />
-          <%= f.text_field :number, autofocus: true, autocomplete: "number",class: "input", placeholer: "number" %>
-  </div>
-    <div class="form-group ">
-          
-          Outros:<br />
-          <%= f.text_field :other, autofocus: true, autocomplete: "other",class: "input", placeholer: "other" %>
-  </div>
 
-  <div class="form-group ">
-          
-          CEP:<br />
-          <%= f.text_field :cep, autofocus: true, autocomplete: "cep",class: "input", placeholer: "cep" %>
+    <div class="row">
+      <div class="form-group ">
+        <div class="col-md-6">
+          <label for:"person_name">Nome</label>
+          <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input form-control form-control-lg", placeholder: "Nome", :required => true %>
+        </div>
+          <div class="col-md-6">
+              <label for:"person_document">Documento</label>
+            <%= f.text_field :document, autofocus: true, autocomplete: "document",class: "input form-control form-control-lg", placeholder: "Documento", :required => true %>
+    </div>
+              </div>
+
+      </div>
+
+      <div class="row">
+        <div class="form-group ">
+          <div class="col-md-4">
+            <label for:"person_cep">CEP</label>
+            <%= f.text_field :cep, autofocus: true, autocomplete: "name",class: "input form-control form-control-lg", placeholder: "CEP" %>
+          </div>
+            <div class="col-md-4">
+                <label for:"person_street">Endereço</label>
+              <%= f.text_field :street, autofocus: true, autocomplete: "document",class: "input form-control form-control-lg", placeholder: "Endereço", :required => true %>
+      </div>
+      <div class="col-md-4">
+          <label for:"person_number">Numero</label>
+        <%= f.text_field :number, autofocus: true, autocomplete: "document",class: "input form-control form-control-lg", placeholder: "Número", :required => true %>
+</div>
+                </div>
+
+        </div>
+
+        <div class="row">
+          <div class="form-group ">
+            <div class="col-md-4">
+              <label for:"person_email">Email</label>
+              <%= f.text_field :email, autofocus: true, autocomplete: "name",class: "input form-control form-control-lg", placeholder: "E-mail" %>
+            </div>
+              <div class="col-md-4">
+                  <label for:"person_phone">Telefone</label>
+                <%= f.text_field :phone, autofocus: true, autocomplete: "document",class: "input form-control form-control-lg", placeholder: "Telefone", :required => true %>
+        </div>
+        <div class="col-md-4">
+            <label for:"person_other">Outro</label>
+          <%= f.text_field :other, autofocus: true, autocomplete: "document",class: "input form-control form-control-lg", placeholder: "..." %>
   </div>
+                  </div>
 
-  <div class="form-group ">
-          
-          e-mail:<br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "input", placeholer: "email" %>
-  </div>
+          </div>
 
 
-  <div class="form-group ">
-          
-          Telefone:<br />
-          <%= f.text_field :phone, autofocus: true, autocomplete: "phone",class: "input", placeholer: "phone" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit %>
+
+
+
+  <div class="actions" style="margin-top: 10px">
+    <%= f.submit 'Registrar pessoa física', class: "btn btn-success btn-md"%>
+    <%= link_to 'Voltar', people_path, class: "btn btn-success btn-md"%>
   </div>
 <% end %>

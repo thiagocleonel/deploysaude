@@ -10,14 +10,15 @@
       </ul>
     </div>
   <% end %>
-  
+
   <div class="form-group ">
-          
-          Nome:<br />
-          <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input", placeholer: "nome" %>
+
+    <label for:"locality_name">Nome</label>
+
+      <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "input form-control form-control-lg", placeholder: "Nome", :required => true %>
   </div>
-  
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Registrar bairro", :class => 'btn btn-success btn-lmd'%>
   </div>
 <% end %>

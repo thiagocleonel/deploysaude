@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_collaborator_path(@collaborator) %> |
-<%= link_to 'Back', collaborators_path %>
+<p>Nome: <%= @collaborator.person.name %> </p>
+<p>Categoria: <%= @collaborator.collaborator_category.name %> </p>
+
+<%= link_to 'Editar', edit_collaborator_path(@collaborator) %> |
+<%= link_to 'Voltar', collaborators_path %>
